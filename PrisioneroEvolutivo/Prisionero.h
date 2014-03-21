@@ -43,6 +43,7 @@ public:
 	void cruzarJugadores(int tamanoFinalPoblacion);
 	void mutarJugadores(double porcentajeMutacion);
 	void evolucionar(int numeroGeneraciones, int numeroJugadores, int cantidadDeJuegos, double porcentajeSobrevive, double porcentajeMutacion);
+	void aumentarPoblacionSinCruce(int tamanoFinalPoblacion);
 
 //	Médotos auxiliares
 	QVector<Jugador*> ordenar(QVector<Jugador*> entrada);

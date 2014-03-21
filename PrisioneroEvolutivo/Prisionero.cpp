@@ -199,6 +199,24 @@ void Prisionero::cruzarJugadores(int tamanoFinalPoblacion)
 }
 
 /*
+ * Este método aumenta el tamaño de la población a un valor
+ * tamanoFinalPoblacion dado. Para eso, escoje aleatóreamente jugadores de la
+ * población actual, los clona y los inserta en la población final.
+ */
+void Prisionero::aumentarPoblacionSinCruce(int tamanoFinalPoblacion)
+{
+	int tamanoActualPoblacion = jugadores.size();
+    
+    for (int i = 0; i < (tamanoFinalPoblacion-tamanoActualPoblacion); i++)
+    {
+		int jugadorClonado = (1 + rand() % tamanoActualPoblacion) - 1;
+        jugadores.append(new Jugador(jugadores.at(jugadorClonado)->getMaquinaDeEstados()->clone(), jugadores.at(jugadorClonado)->getNumeroEstados() ));
+    }
+
+	totalDeJugadores=jugadores.size();
+}
+
+/*
  * Muta los jugadores.
  * La mutación consiste en intercambiar flechas en la maquina de estados
  * El porcentaje de entrada va de 0 a 1
@@ -407,12 +425,13 @@ void Prisionero::inicializarPrisionero(int TC, int CC, int TT, int CT, int canti
 
 void Prisionero::evolucionar(int numeroGeneraciones, int numeroJugadores, int cantidadDeJuegos, double porcentajeSobrevive, double porcentajeMutacion)
 {
-	for (int i = 0; i < numeroGeneraciones; ++i)
-	{
+    for (int i = 0; i < numeroGeneraciones; ++i)
+    {
 		reducirPoblacion((int)(porcentajeSobrevive*numeroJugadores));
-		cruzarJugadores(numeroJugadores);
-		mutarJugadores(porcentajeMutacion);
+        //cruzarJugadores(numeroJugadores);
+        aumentarPoblacionSinCruce(numeroJugadores);
+        mutarJugadores(porcentajeMutacion);
 		jugar(cantidadDeJuegos);
 		limpiarEstadosJugadores();
-	}
+    }
 }

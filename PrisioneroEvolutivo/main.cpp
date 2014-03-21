@@ -2,9 +2,8 @@
  * Carlos Andres Delgado 
  * Victor Alberto Romero
  * Proyecto Software Vida Artificial
- * Feb - Jun 2011
+ * Feb - Jun 2014
  */
-#include <QtCore/QCoreApplication>
 #include <iostream>
 #include "Prisionero.h"
 #include <time.h> 
@@ -21,7 +20,7 @@ int main(int argc, char *argv[])
     srand(time(NULL) + getpid());
 
 //	Parámetros modificables mediante entrada
-	int numeroGeneraciones= 1000;
+	int numeroGeneraciones= 5000;
 	int numeroJugadores = 50;
 	int cantidadDeJuegos=100;
 

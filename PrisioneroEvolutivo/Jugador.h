@@ -30,6 +30,8 @@ public:
 	MaquinaDeEstados* obtenerMaquinaEstados();
 	void definirMaquinaEstados(MaquinaDeEstados* maquinaIN);
 	void imprimirMaquinaDeEstados();
+	MaquinaDeEstados* getMaquinaDeEstados();
+	int getNumeroEstados();
 };
 
 #endif // JUGADOR_H

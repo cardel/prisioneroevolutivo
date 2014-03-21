@@ -23,6 +23,10 @@ Jugador::Jugador(MaquinaDeEstados *maquinaIn, int numeroEstadosIN)
 
 Jugador::~Jugador()
 {
+    /* OJO!!! Estos deletes no estaban, pueden dar problema si se hiceron los
+     * deletes en alquina otra parte!!*/
+    delete estado;
+    delete maquinaDeEstados;
 }
 
 /*
@@ -104,4 +108,14 @@ void Jugador::definirMaquinaEstados(MaquinaDeEstados *maquinaIN)
 void Jugador::imprimirMaquinaDeEstados()
 {
 	maquinaDeEstados->imprimirValores();
+}
+
+MaquinaDeEstados* Jugador::getMaquinaDeEstados()
+{
+    return maquinaDeEstados;
+}
+
+int Jugador::getNumeroEstados()
+{
+    return numeroEstados;
 }

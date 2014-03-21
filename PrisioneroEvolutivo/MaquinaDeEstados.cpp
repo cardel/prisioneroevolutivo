@@ -14,6 +14,9 @@ MaquinaDeEstados::MaquinaDeEstados()
 
 MaquinaDeEstados::~MaquinaDeEstados()
 {
+    /* OJO!!! Estos deletes no estaban, pueden dar problema si se hiceron los
+     * deletes en alquina otra parte!!*/
+    delete tablaDeEstados;
 }
 
 /*
@@ -120,4 +123,27 @@ void MaquinaDeEstados::imprimirValores()
 	}
 
 	cout<<"+--------------------------------+"<<endl;
+}
+
+/* 
+ * Clona la maquina de estados (pide memoria!)
+ */
+MaquinaDeEstados* MaquinaDeEstados::clone()
+{
+    MaquinaDeEstados* nuevaMaquina = new MaquinaDeEstados();
+    nuevaMaquina->setEstadoPresente(estadoPresente);
+
+    int tamano = tablaDeEstados->size();
+    for (int i = 0; i < tamano; i++) {
+        QVector<int> estado;
+        estado << tablaDeEstados->at(i)[0] << tablaDeEstados->at(i)[1] << tablaDeEstados->at(i)[2] << tablaDeEstados->at(i)[3];
+        nuevaMaquina->tablaDeEstados->append(estado);
+    }
+
+    return nuevaMaquina;
+}
+
+void MaquinaDeEstados::setEstadoPresente(int estadoPresenteIn)
+{
+    estadoPresente=estadoPresenteIn;
 }

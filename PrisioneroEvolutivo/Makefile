@@ -453,8 +453,12 @@ Jugador.o: Jugador.cpp Jugador.h \
 		Estado.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Jugador.o Jugador.cpp
 
-main.o: main.cpp /usr/include/qt/QtCore/QCoreApplication \
-		/usr/include/qt/QtCore/qcoreapplication.h \
+main.o: main.cpp Prisionero.h \
+		Jugador.h \
+		MaquinaDeEstados.h \
+		/usr/include/qt/QtCore/QVector \
+		/usr/include/qt/QtCore/qvector.h \
+		/usr/include/qt/QtCore/qalgorithms.h \
 		/usr/include/qt/QtCore/qglobal.h \
 		/usr/include/qt/QtCore/qconfig.h \
 		/usr/include/qt/QtCore/qfeatures.h \
@@ -491,33 +495,12 @@ main.o: main.cpp /usr/include/qt/QtCore/QCoreApplication \
 		/usr/include/qt/QtCore/qtypeinfo.h \
 		/usr/include/qt/QtCore/qtypetraits.h \
 		/usr/include/qt/QtCore/qsysinfo.h \
-		/usr/include/qt/QtCore/qstring.h \
-		/usr/include/qt/QtCore/qchar.h \
-		/usr/include/qt/QtCore/qbytearray.h \
-		/usr/include/qt/QtCore/qrefcount.h \
-		/usr/include/qt/QtCore/qnamespace.h \
-		/usr/include/qt/QtCore/qarraydata.h \
-		/usr/include/qt/QtCore/qstringbuilder.h \
-		/usr/include/qt/QtCore/qobject.h \
-		/usr/include/qt/QtCore/qobjectdefs.h \
-		/usr/include/qt/QtCore/qobjectdefs_impl.h \
-		/usr/include/qt/QtCore/qlist.h \
-		/usr/include/qt/QtCore/qalgorithms.h \
 		/usr/include/qt/QtCore/qiterator.h \
-		/usr/include/qt/QtCore/qcoreevent.h \
-		/usr/include/qt/QtCore/qscopedpointer.h \
-		/usr/include/qt/QtCore/qmetatype.h \
-		/usr/include/qt/QtCore/qvarlengtharray.h \
-		/usr/include/qt/QtCore/qcontainerfwd.h \
-		/usr/include/qt/QtCore/qisenum.h \
-		/usr/include/qt/QtCore/qobject_impl.h \
-		/usr/include/qt/QtCore/qeventloop.h \
-		Prisionero.h \
-		Jugador.h \
-		MaquinaDeEstados.h \
-		/usr/include/qt/QtCore/QVector \
-		/usr/include/qt/QtCore/qvector.h \
+		/usr/include/qt/QtCore/qlist.h \
+		/usr/include/qt/QtCore/qrefcount.h \
+		/usr/include/qt/QtCore/qarraydata.h \
 		/usr/include/qt/QtCore/qpoint.h \
+		/usr/include/qt/QtCore/qnamespace.h \
 		Estado.h \
 		MatrizDePagos.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp

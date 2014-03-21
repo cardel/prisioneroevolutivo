@@ -8,6 +8,8 @@ using namespace std;
 
 class MaquinaDeEstados
 {
+
+private:
     /*
      * Tabla de estados contiene una lista de estados
      * Son dos vectores por estado cada uno con una jugada distinta
@@ -44,6 +46,8 @@ public:
 	void eliminarEstado(int numEstado);
 	void resetearEstadoPresente();
 	void imprimirValores();
+	MaquinaDeEstados* clone();
+	void setEstadoPresente(int estadoPresenteIn);
 };
 
 #endif // MAQUINADEESTADOS_H
