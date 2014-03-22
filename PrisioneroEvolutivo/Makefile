@@ -67,22 +67,14 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/common/g++-unix.conf \
 		/usr/lib/qt/mkspecs/qconfig.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_bootstrap_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_clucene_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_concurrent.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_concurrent_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_core.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_core_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_dbus.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_dbus_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_declarative.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_declarative_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_designer.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_designer_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_designercomponents_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_gui.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_gui_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_help.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_help_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_network.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_network_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_opengl.pri \
@@ -102,18 +94,12 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quick.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quick_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quickparticles_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_script.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_script_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_scripttools.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_scripttools_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_sensors.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_sensors_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_sql.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_sql_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_testlib.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_testlib_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_uitools.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_uitools_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webkit.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webkit_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webkitwidgets.pri \
@@ -187,22 +173,14 @@ Makefile: PrisioneroEvolutivo.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 		/usr/lib/qt/mkspecs/common/g++-unix.conf \
 		/usr/lib/qt/mkspecs/qconfig.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_bootstrap_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_clucene_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_concurrent.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_concurrent_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_core.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_core_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_dbus.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_dbus_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_declarative.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_declarative_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_designer.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_designer_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_designercomponents_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_gui.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_gui_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_help.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_help_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_network.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_network_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_opengl.pri \
@@ -222,18 +200,12 @@ Makefile: PrisioneroEvolutivo.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 		/usr/lib/qt/mkspecs/modules/qt_lib_quick.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quick_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quickparticles_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_script.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_script_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_scripttools.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_scripttools_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_sensors.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_sensors_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_sql.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_sql_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_testlib.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_testlib_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_uitools.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_uitools_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webkit.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webkit_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webkitwidgets.pri \
@@ -277,22 +249,14 @@ Makefile: PrisioneroEvolutivo.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 /usr/lib/qt/mkspecs/common/g++-unix.conf:
 /usr/lib/qt/mkspecs/qconfig.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_bootstrap_private.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_clucene_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_concurrent.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_concurrent_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_core.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_core_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_dbus.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_dbus_private.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_declarative.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_declarative_private.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_designer.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_designer_private.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_designercomponents_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_gui.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_gui_private.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_help.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_help_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_network.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_network_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_opengl.pri:
@@ -312,18 +276,12 @@ Makefile: PrisioneroEvolutivo.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 /usr/lib/qt/mkspecs/modules/qt_lib_quick.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_quick_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_quickparticles_private.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_script.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_script_private.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_scripttools.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_scripttools_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_sensors.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_sensors_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_sql.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_sql_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_testlib.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_testlib_private.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_uitools.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_uitools_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_webkit.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_webkit_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_webkitwidgets.pri:

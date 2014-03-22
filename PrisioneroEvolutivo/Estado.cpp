@@ -16,7 +16,15 @@ Estado::Estado(int numeroEstados)
 }
 Estado::~Estado()
 {
-
+	/*
+	 * @Cardel 21 de Marzo 21:15 GMT -05
+	 * Inicio modificación del metodo delete
+	 */
+	 delete estadoPE;
+	/*
+	 * @Cardel 21 de Marzo 21:15 GMT -05
+	 * Fin modificación del metodo delete
+	 */
 }
 
 /*

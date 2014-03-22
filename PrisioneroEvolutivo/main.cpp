@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 
 	if(toupper(respuesta)=='Y')
 	{
-		cout<<"¿Cual desea que sea el número inical de estados?"<<endl;
+		cout<<"¿Cual desea que sea el número inicial de estados?"<<endl;
 		cin>>numeroInicialEstados;
 		cout<<"¿Cual es el porcentaje de supervivencia? (en un rango de 0 a 1)"<<endl;
 		cin>>porcentajeSobrevive;
