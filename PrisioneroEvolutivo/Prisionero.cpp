@@ -29,6 +29,7 @@ Prisionero::Prisionero(int numero, int numMaximoEstados)
 
 Prisionero::~Prisionero()
 {
+	delete matrizDePagos;
 }
 
 /*
@@ -257,62 +258,68 @@ void Prisionero::mutarJugadores(double porcentajeMutacion)
 		}
 	}
 }
+/*
+ * @Cardel: 21 de Marzo 2014 21:30 GMT 5
+ * Inicio modificación quitar limpiarEstadoJugadores
+ */
+//void Prisionero::limpiarEstadosJugadores()
+//{
+	//int estadosMaximos = jugadores.at(0)->obtenerNumeroEstados();
 
-void Prisionero::limpiarEstadosJugadores()
-{
-	int estadosMaximos = jugadores.at(0)->obtenerNumeroEstados();
+	//for (int i = 1; i < totalDeJugadores; ++i)
+	//{
+		//if(estadosMaximos < jugadores.at(i)->obtenerNumeroEstados())
+			//estadosMaximos = jugadores.at(i)->obtenerNumeroEstados();
+	//}
 
-	for (int i = 1; i < totalDeJugadores; ++i)
-	{
-		if(estadosMaximos < jugadores.at(i)->obtenerNumeroEstados())
-			estadosMaximos = jugadores.at(i)->obtenerNumeroEstados();
-	}
+	//estadosMaximos++;
 
-	estadosMaximos++;
+	//int* estadosUtiles = new int[estadosMaximos];
 
-	int* estadosUtiles = new int[estadosMaximos];
+	//for (int i = 0; i < totalDeJugadores; ++i)
+	//{
+		//for (int j = 0; j < estadosMaximos; j++) estadosUtiles[j]=0;
 
-	for (int i = 0; i < totalDeJugadores; ++i)
-	{
-		for (int j = 0; j < estadosMaximos; j++) estadosUtiles[j]=0;
+		//auxRecursionLimpiarEstados(estadosUtiles, 1, i);
 
-		auxRecursionLimpiarEstados(estadosUtiles, 1, i);
+		//int numEstadosUtiles=0;
 
-		int numEstadosUtiles=0;
+		//for (int j = 0; j < estadosMaximos; ++j)
+		//{
+			//numEstadosUtiles += estadosUtiles[j];
+			//if(estadosUtiles[j]==1)
+				//estadosUtiles[j]=numEstadosUtiles;
+		//}
 
-		for (int j = 0; j < estadosMaximos; ++j)
-		{
-			numEstadosUtiles += estadosUtiles[j];
-			if(estadosUtiles[j]==1)
-				estadosUtiles[j]=numEstadosUtiles;
-		}
+		//MaquinaDeEstados* maquina = jugadores.at(i)->obtenerMaquinaEstados();
+		//MaquinaDeEstados* maquinaNueva = new MaquinaDeEstados();
 
-		MaquinaDeEstados* maquina = jugadores.at(i)->obtenerMaquinaEstados();
-		MaquinaDeEstados* maquinaNueva = new MaquinaDeEstados();
+		//for (int j = 0; j < maquina->obtenerNumeroTotalEstados(); ++j)
+		//{
+			//int* nuevoEstado = new int[4];
 
-		for (int j = 0; j < maquina->obtenerNumeroTotalEstados(); ++j)
-		{
-			int* nuevoEstado = new int[4];
+			//if(estadosUtiles[maquina->obtenerEstado(j+1).at(0)-1]!=0)
+			//{
+				//nuevoEstado[0]= estadosUtiles[maquina->obtenerEstado(j+1).at(0)-1];
+				//nuevoEstado[1]= estadosUtiles[maquina->obtenerEstado(j+1).at(1)-1];
+				//nuevoEstado[2]= estadosUtiles[maquina->obtenerEstado(j+1).at(2)-1];
+				//nuevoEstado[3]= estadosUtiles[maquina->obtenerEstado(j+1).at(3)-1];
 
-			if(estadosUtiles[maquina->obtenerEstado(j+1).at(0)-1]!=0)
-			{
-				nuevoEstado[0]= estadosUtiles[maquina->obtenerEstado(j+1).at(0)-1];
-				nuevoEstado[1]= estadosUtiles[maquina->obtenerEstado(j+1).at(1)-1];
-				nuevoEstado[2]= estadosUtiles[maquina->obtenerEstado(j+1).at(2)-1];
-				nuevoEstado[3]= estadosUtiles[maquina->obtenerEstado(j+1).at(3)-1];
+				//maquinaNueva->agregarEstados(nuevoEstado);
+			//}
+		//}
 
-				maquinaNueva->agregarEstados(nuevoEstado);
-			}
-		}
+		//jugadores.at(i)->definirMaquinaEstados(maquinaNueva);
+	//}
 
-		jugadores.at(i)->definirMaquinaEstados(maquinaNueva);
-	}
-
-	if (estadosUtiles !=0 )
-		delete [] estadosUtiles;
-	estadosUtiles=0;
-}
-
+	//if (estadosUtiles !=0 )
+		//delete [] estadosUtiles;
+	//estadosUtiles=0;
+//}
+/*
+ * @Cardel: 21 de Marzo 2014 21:30 GMT 5
+ * Fin modificación quitar limpiarEstadoJugadores
+ */
 void Prisionero::auxRecursionLimpiarEstados(int* estadosUtiles, int estadoInicial, int numJugador)
 {
 	if(estadosUtiles[estadoInicial-1]==1)
@@ -420,7 +427,15 @@ void Prisionero::inicializarPrisionero(int TC, int CC, int TT, int CT, int canti
 {
 	iniciarMatrizDePagos(TC, CC, TT, CT);
 	jugar(cantidadDeJuegos);
-	limpiarEstadosJugadores();
+	/*
+	 * @Cardel: 21 de Marzo 2014 21:30 GMT 5
+	 * Inicio modificación quitar limpiarEstadoJugadores
+	 */
+	//limpiarEstadosJugadores();
+	/*
+	 * @Cardel: 21 de Marzo 2014 21:30 GMT 5
+	 * Inicio modificación quitar limpiarEstadoJugadores
+	 */
 }
 
 void Prisionero::evolucionar(int numeroGeneraciones, int numeroJugadores, int cantidadDeJuegos, double porcentajeSobrevive, double porcentajeMutacion)
@@ -432,6 +447,14 @@ void Prisionero::evolucionar(int numeroGeneraciones, int numeroJugadores, int ca
         aumentarPoblacionSinCruce(numeroJugadores);
         mutarJugadores(porcentajeMutacion);
 		jugar(cantidadDeJuegos);
-		limpiarEstadosJugadores();
-    }
+		/*
+		 * @Cardel: 21 de Marzo 2014 21:30 GMT 5
+		 * Inicio modificación quitar limpiarEstadoJugadores
+		 */
+		//limpiarEstadosJugadores();
+		/*
+		 * @Cardel: 21 de Marzo 2014 21:30 GMT 5
+		 * Inicio modificación quitar limpiarEstadoJugadores
+		 */
+	 }
 }
